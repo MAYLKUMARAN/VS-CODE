@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-int sort(int arr[],int size)
+void sort(int arr[],int size)
 {
     int temp;
     for (int i=0;i<size;i++)
@@ -22,21 +22,59 @@ int main()
     int arr_1[100],arr_2[100];
     fgets(string_1,100,stdin);
     fgets(string_2,100,stdin);
-    int size,count=0;
-    size=strlen(string_1);
-    for (int i=0;i<size;i++)
-    {
-        arr_1[i]=string_1[i]-'0';
-        arr_2[i]=string_2[i]-'0';
-    }
-    // for(int i=0;i<size;i++)
-    // {
-    // printf("%d:%d | ",arr_1[i],arr_2[i]);
-    // }
-    sort(arr_1,size);
-    sort(arr_2,size);
-    for(int i=0;i<size;i++)
-    {
-    printf("%d:%d | ",arr_1[i],arr_2[i]);
+    if (strlen(string_1) ==1 || strlen(string_1) > 1000001 || strlen(string_2) ==1 || strlen(string_2) > 1000001)
+        {
+            printf("String 1 must be between 1 and 100000 characters");
+        }
+    else
+        {
+        if(strlen(string_1)==strlen(string_2))
+            {
+                
+                    int size,count=0;
+                    size=strlen(string_1)-1;
+                    for (int i=0;i<size;i++)
+                        {
+                            arr_1[i]=(int)string_1[i];
+                            arr_2[i]=(int)string_2[i];
+                        }
+                    for(int i=0;i<size;i++)
+                    {
+                    if(arr_1[i]<97 || arr_2[i]>122 || arr_1[i]>122 || arr_2[i]<97)
+                    {
+                        printf("Only lowercase characters and space is permitted in the input string\n");
+                    }
+                    else
+                    {
+                    for (int i=0;i<size;i++)
+                    {
+                        printf("%d|%d\n",arr_1[i],arr_2[i]);
+                    }
+                    sort(arr_1,size);
+                    sort(arr_2,size);
+                    for(int i=0;i<size;i++)
+                        {
+                            if(arr_1[i]==arr_2[i])
+                                {
+                                    count++;
+                                }
+                        }
+                    if(count==size)
+                        {
+                            printf("TRUE");
+                        }
+                    else
+                        {  
+                            printf("FALSE");
+                        }
+                        }
+                        break;
+                    }
+            }
+            
+            else
+                {
+                    printf("FLASE");
+                }
     }
 }
