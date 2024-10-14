@@ -73,4 +73,5 @@ int main()
                     printf("FLASE");
                 }
     }
-}
+} 
+//completed
