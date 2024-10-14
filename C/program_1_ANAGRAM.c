@@ -46,10 +46,6 @@ int main()
                     }
                     else
                     {
-                    for (int i=0;i<size;i++)
-                    {
-                        printf("%d|%d\n",arr_1[i],arr_2[i]);
-                    }
                     sort(arr_1,size);
                     sort(arr_2,size);
                     for(int i=0;i<size;i++)
