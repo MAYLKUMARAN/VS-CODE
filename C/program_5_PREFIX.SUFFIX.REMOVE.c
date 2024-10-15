@@ -4,6 +4,5 @@
 int main()
 {
     char string1[q];
-    fgets(string1,q,stdin);
     
 }
