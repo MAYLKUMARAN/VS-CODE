@@ -38,5 +38,5 @@ int main()
             max=dupe_val[i];
         }
     }
-    printf("%c",stringa[max-1]);
+    printf("%c\n",stringa[max-1]);
 }
