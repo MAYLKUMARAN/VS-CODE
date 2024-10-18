@@ -28,7 +28,6 @@ int main()
             if(string1[0]==string1[size-1])
             {
                 first=string1[0];
-                first=string1[0];
                 rotate(string1,size);
             }
             else if(string1[0]!=string1[size-1] && string1[size-1]==first)
