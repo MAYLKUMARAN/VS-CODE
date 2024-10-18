@@ -2,4 +2,4 @@
 int main()
 {
     printf("CAN'T UNDERSTAND QUESTION");
-}
+}   
