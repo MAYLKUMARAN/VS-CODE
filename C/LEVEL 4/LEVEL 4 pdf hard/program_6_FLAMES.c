@@ -2,6 +2,9 @@
 #include<string.h>
 int main()
 {
+    printf("____________________");
+    printf("|      FLAMES      |");
+    printf("____________________\n");
 	int a,b,c=0,l=0,i,j,k,ch,u,po;
 	char y[20],p[20];
 	printf("Enter name:");
