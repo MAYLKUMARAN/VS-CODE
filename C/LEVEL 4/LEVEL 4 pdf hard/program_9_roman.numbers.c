@@ -2,80 +2,68 @@
 #include<string.h>
 int main()
 {
-    char a[100];
-    int num=0;
-    scanf("%s",a);
-    for(int i=0;a[i]!='\0';i++)
+    char ch,string[100];
+    int index=0,sum=0;
+    while(1)
     {
-        num*=10;
-        num+=a[i]-'0';
-    }
-    while(num!=0)
-    {
-        if(num>=1000)
+        ch=getchar();
+        if(ch=='\n')
         {
-            printf("M");
-            num-=1000;
+            break;
         }
-        else if(num>=900)
+        if(ch=='I' || ch=='V' || ch=='X' || ch=='L' || ch=='C' || ch=='D' || ch=='M')
         {
-            printf("CM");
-            num-=900;
+        string[index]=ch;
+        index++;
         }
-        else if(num>=500)
+        else
         {
-            printf("D");
-            num-=500;
-        }
-        else if(num>=400)
-        {
-            printf("CD");
-            num-=400;
-        }
-        else if(num>=100)
-        {
-            printf("C");
-            num-=100;
-        }
-        else if(num>=90)
-        {
-            printf("xc");
-            num-=90;
-        }
-        else if(num>=50)
-        {
-            printf("L");
-            num-=50;
-        }
-        else if(num>=40)
-        {
-            printf("XL");
-            num-=40;
-        }
-        else if(num>=10)
-        {
-            printf("X");
-            num-=10;
-        }
-        else if(num>=9)
-        {
-            printf("IX");
-            num-=9;
-        }
-        else if(num>=5)
-        {
-            printf("V");
-            num-=5;
-        }
-        else if(num>=4)
-        {
-            printf("IV");
-            num-=4;
-        }
-        else if(num>=1)
-        {
-            printf("I");
-            num-=1;
+            printf("Invalid Input");
+            return 0;
         }
     }
+    for(int i=0;i<=index;i++)
+    {
+        if(string[i]=='I')
+        {
+            sum+=1;
+        }
+        else if(string[i]=='V')
+        {
+            sum+=5;
+        }
+        else if(string[i]=='X')
+        {
+            sum+=10;
+        }
+        else if(string[i]=='L')
+        {
+            sum+=50;
+        }
+        else if(string[i]=='C')
+        {
+            sum+=100;
+        }
+        else if(string[i]=='D')
+        {
+            sum+=500;
+        }
+        else if(string[i]=='M')
+        {
+            sum+=1000;
+        }
+        if(string[i]=='V' && string[i-1]=='I' || string[i]=='X' && string[i-1]=='I')
+        {
+            sum-=2;
+        }
+        if(string[i]=='L' && string[i-1]=='X' || string[i]=='C' && string[i-1]=='X')
+        {
+            sum-=20;
+        }
+        if(string[i]=='D' && string[i-1]=='C' || string[i]=='M' && string[i-1]=='C')
+        {
+            sum-=200;
+        }
+    }
+    printf("%d",sum);
 }
