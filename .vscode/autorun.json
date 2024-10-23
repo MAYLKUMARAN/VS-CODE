@@ -3,9 +3,7 @@
     {
       "event": "onStartup",
       "commands": [
-        "git pull origin main",  
-        "gh pr create --base main --head main --title 'My Pull Request' --body 'Description of the changes'", 
-        "git push origin main" 
+        "git pull origin main && echo 'Pulled changes successfully.' || echo 'Failed to pull changes.'"
       ]
     }
   ]
