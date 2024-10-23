@@ -1,0 +1,11 @@
+{
+    "runOn": [
+      {
+        "event": "onStartup",
+        "commands": [
+          "git pull",  // Pull the latest changes from the remote main branch
+          "gh pr create --base main --head main --title 'My Pull Request' --body 'Description of the changes'"
+        ]
+      }
+    ]
+  }
