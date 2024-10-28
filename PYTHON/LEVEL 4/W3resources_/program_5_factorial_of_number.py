@@ -1,6 +1,6 @@
 def fact(a):
     b=1
-    for i in range(1,a+2,1):
+    for i in range(1,a+1):
         b*=i
     return b
 def main():
@@ -8,11 +8,11 @@ def main():
     b=0
     if(a.isdigit()):
         a=int(a)
-        b=fact(a-1)
+        b=fact(a)
         print("The factorial is: ",b)
         continue_prompt=input("Do you want to continue again(yes/no): ")
         if continue_prompt.lower()=="yes":
-            print("====================================================================")
+            print("=====================")
             main()
         else:
             print("Program exited")
