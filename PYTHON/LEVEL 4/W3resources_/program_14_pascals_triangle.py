@@ -11,10 +11,10 @@ def pascal(i,j):
 def main():
     a=int(input("Enter the size of the triangle: "))
     for i in range(a):
-        print()
         for j in range(a-i+1):
-            print(' ',end='')
+            print(end=' ')
         for j in range(i+1):
-            print(pascal(i,j),' ',end='')
+            print(pascal(i,j),end=' ')
+        print()
 if __name__=="__main__":
     main()
