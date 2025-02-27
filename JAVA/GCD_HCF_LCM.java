@@ -5,6 +5,24 @@ public class GCD_HCF_LCM {
         Scanner input= new Scanner(System.in);
         int a=input.nextInt();
         int b=input.nextInt();
-        
+        int val=0;
+        if(a<b)
+        {
+            val=a;
+        }
+        else
+        {
+            val=b;
+        }
+        int GCD_val=0;
+        int i=val;
+        while(i!=0)
+        {
+            if(a%i==0 && b%i==0)
+            {
+                GCD_val=i;
+                break;
+            }
+        }
     }
 }
