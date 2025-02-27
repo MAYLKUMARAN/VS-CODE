@@ -8,5 +8,6 @@ class hello
         int a=input.nextInt();
         float b=input.nextFloat();
         System.out.println(a*b+"multiply \n"+"\t EOF");
+        input.close();
     }
 }

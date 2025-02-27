@@ -14,6 +14,7 @@ class number_conversion{
         {
             System.out.printf("The octal value is: %s",Integer.toOctalString(n));
         }
+        input.close();
     }
 }
 }

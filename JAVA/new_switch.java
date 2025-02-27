@@ -10,5 +10,6 @@ class new_switch
             case 1 ->System.out.print("Monday");
             default ->System.out.print("mention 1");
         }
+        input.close();
     }
 }
