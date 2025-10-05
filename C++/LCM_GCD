@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=0,b=0,val=0;
+    cout<<"Enter the first number: ";
+    cin>>a;
+    cout<<"Enter the second number: ";
+    cin>>b;
+    if(a<b)
+    {
+        val=a;
+    }
+    else
+    {
+        val=b;
+    }
+    for(int i=val;i!=0;i--)
+    {
+        if(a%i==0 && b%i==0)
+        {
+            val=i;
+            break;
+        }
+    }
+    cout<<"GCD: "<<val<<endl;
+    cout<<"LCM: "<<(a*b)/val;
+}
