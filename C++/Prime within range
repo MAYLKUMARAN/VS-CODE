@@ -1,0 +1,36 @@
+    #include<iostream>
+    using namespace std;
+    bool primechk(int a)
+    {
+        if (a<=1)
+        {
+            return false;
+        }
+        for (int i=2;i<a;i++)
+        {
+            if(a%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    int main()
+    {
+        int a=0,b=0;
+        cout<<"Enter starting range: ";
+        cin>>a;
+        cout<<"Enter ending range: ";
+        cin>>b;
+        for(int a;a<=b;a++)
+        {
+        if(primechk(a))
+        {
+           cout<<a<<endl;
+        }
+        else
+        {
+            continue;
+        }
+        }
+    }
