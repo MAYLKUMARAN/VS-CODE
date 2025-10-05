@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+using namespace std;
+bool palindrome(int a)
+{
+    int a2=a,rev=0;
+    while (a2!=0)
+    {
+        int temp=a2%10;
+        rev=rev*10+temp;
+        a2/=10;
+    }
+    if(a==rev)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int main()
+{
+    int a=0,b=0;
+    cout<<"Enter starting range: ";
+    cin>>a;
+    cout<<"Enter ending range: ";
+    cin>>b;
+    for (int i=a;i<=b;i++)
+    {
+    if(palindrome(i))
+    {
+        cout<<i<<endl;
+    }
+    else
+    {
+        continue;
+    }
+    }
+}
